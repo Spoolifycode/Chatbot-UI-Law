@@ -1,0 +1,38 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer components {
+  .message-bubble {
+    @apply max-w-[85%] rounded-2xl p-4 mb-2;
+  }
+
+  .message-bubble.user {
+    @apply bg-gradient-to-r from-blue-500 to-cyan-500 text-white;
+  }
+
+  .message-bubble.bot {
+    @apply bg-gray-100 dark:bg-chat-darker text-gray-900 dark:text-gray-100;
+  }
+
+  .chat-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.gray.400') theme('colors.transparent');
+  }
+
+  .chat-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .chat-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .chat-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+  }
+
+  .header-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-cyan-500;
+  }
+}
